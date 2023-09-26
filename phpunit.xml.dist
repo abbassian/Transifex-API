@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/autoload.php" colors="false" backupGlobals="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage includeUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="Unit">
+      <directory>tests</directory>
+      <exclude>tests/Functional</exclude>
+    </testsuite>
+    <testsuite name="Functional">
+      <directory>tests/Functional</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="TRANSIFEX_ORGANIZATION" value="changeme"/>
+    <env name="TRANSIFEX_PROJECT" value="changeme"/>
+    <env name="TRANSIFEX_API_TOKEN" value="changeme"/>
+  </php>
+</phpunit>

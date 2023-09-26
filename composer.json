@@ -1,0 +1,55 @@
+{
+    "name": "autoborna/transifex",
+    "description": "The Transifex API Package is a wrapper of the Transifex API available for PHP developers",
+    "keywords": ["php", "transifex"],
+    "homepage": "https://github.com/autoborna/Transifex-API",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Michael Babker",
+            "homepage": "https://www.babdev.com"
+        }
+    ],
+    "require": {
+        "php": "~7.4|^8.0|^8.1",
+        "ext-json": "*",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.5",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpstan/phpstan": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Autoborna\\Transifex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Autoborna\\Transifex\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "phpstan": "vendor/bin/phpstan analyse src tests -l 5",
+        "cs": "vendor/bin/php-cs-fixer fix -v --dry-run --diff",
+        "fixcs": "vendor/bin/php-cs-fixer fix -v"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0-dev"
+        }
+    },
+    "config": {
+        "platform": {
+          "php": "7.4"
+        }
+    }
+}
